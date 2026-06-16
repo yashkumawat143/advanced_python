@@ -1,0 +1,79 @@
+Level 1: Very Easy
+
+
+1....Create a Student class with attributes name and age.
+answer :
+
+class student:
+    def __init__(self,name,age):
+        self.name=name;
+        self.age=age;
+n1=input("Enter the name : ");
+n2=int(input("Enter the age : "));
+s1=student(n1,n2);
+print("name : ",s1.name);
+print("age :",s1.age);
+
+
+
+
+2.....Create a Car class with attributes brand and model.
+answer :
+
+class car:
+    def __init__(self,brand,model):
+        self.brand=brand;
+        self.model=model;
+n1=input("Enter the brand name : ");
+n2=input("Enter the model : ");
+s1=car(n1,n2);
+print("Brand : ",s1.brand);
+print("Model : ",s1.model);
+
+
+
+3....Create a BankAccount class with methods:
+deposit()
+withdraw()
+check_balance()
+
+answer :
+
+
+print("BANK ACOUNT");
+print("1.deposite");
+print("2.withdraw");
+print("3.check balance");
+print("4.exit");
+class bankacount:
+    def __init__(self):
+        
+        self.new=0;
+        while True:
+            n1=input("Enter the elements : ");
+            if(n1=="deposite"):
+                n=int(input("Enter the balance : "))
+                self.new+=n;
+                print("Succesfully deposite"); 
+                
+                
+            elif(n1=="withdraw"):
+                n=int(input("Enter the withdraw amount : "));
+                if(n<self.new):
+                    self.new-=n;
+                else:
+                    print("Not sufficient balance");
+            elif(n1=="check balance"):
+                print("The balance : ",self.new);
+            elif(n1=="exit"):
+                break;
+                
+s=bankacount();
+
+
+
+
+                
+           
+   
+ 
