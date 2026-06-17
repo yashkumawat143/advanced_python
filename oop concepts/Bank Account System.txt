@@ -1,0 +1,51 @@
+Bank Account System 
+
+
+
+
+
+--------->>>>>
+
+print("BANK ACOUNT");
+print("1.deposite");
+print("2.withdraw");
+print("3.check balance");
+print("4.exit");
+class bankacount:
+    def __init__(self):
+        
+        self.new=0;
+        while True:
+            n1=input("Enter the elements : ");
+            if(n1=="deposite"):
+                n=int(input("Enter the balance : "))
+                self.new+=n;
+                print("Succesfully deposite"); 
+                
+                
+            elif(n1=="withdraw"):
+                n=int(input("Enter the withdraw amount : "));
+                if(self.new>=n):
+                    self.new-=n;
+                    print("Withdraw successfully");
+                else:
+                    print("You have no enough money");
+            elif(n1=="check balance"):
+                print(self.new);
+            elif(n1=="exit"):
+                 print("Thank you");
+                 break;
+
+                
+s=bankacount();
+
+
+
+
+                
+           
+   
+                
+
+        
+  
