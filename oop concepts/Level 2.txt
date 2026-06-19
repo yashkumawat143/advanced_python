@@ -1,0 +1,48 @@
+Q....print the name and marks of three subject and also find average.
+
+answer :
+
+
+class student:
+    def __init__(self,name,marks):
+        self.name=name;
+        self.marks=marks;
+    def average(self):
+        sum=0
+        for i in self.marks:
+            sum=sum+i;
+        print(self.name,"score is",sum/3);
+ans=student("Yash",[12,34,45]);
+ans.average();
+
+
+
+
+Q....Creat a  account and credit and debit the amount and also have account number and account number .
+answer :
+
+class account:
+    def __init__(self,balance,account):
+        self.balance=balance;
+        self.account=account;
+    def deb(self,amount):
+        self.balance-=amount;
+        print("The amount succesfully debit","now amount is ",self.balance);
+    def cred(self,cre):
+        self.balance+=cre;
+        print("The amount successfully credit","Noe amount is ",self.balance);
+
+        
+acc1=account(100000,12345);
+n1=int(input("Enter the amount do you want debit : "));
+acc1.deb(n1);
+n2=int(input("Enter the amount do you want to credit : "));
+acc1.cred(n2);
+
+
+
+
+        
+
+
+

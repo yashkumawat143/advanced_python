@@ -1,0 +1,68 @@
+oops Questions....
+
+
+
+
+1....creat a circle class and define radius, also area(),perimeter().
+answer :
+
+class circle():
+    def __init__(self,radius):
+        self.radius=radius;
+    def area(self):
+        return 3.14*self.radius*self.radius;
+    def perimeter(self):
+        return 2*3.14*self.radius;
+
+
+s=circle(5);
+print(s.radius);
+print(s.area());
+print(s.perimeter());
+
+
+
+
+2....creat a employee class and add role,department,salary  and also use show detail method,  
+     then creat a another class engineer and enherit the employee property and add name,age.
+
+
+answer :
+
+class Employee:
+    def __init__(self,role,department,salary):
+        self.role=role;
+        self.department=department;
+        self.salary=salary;
+    def showdetail(self):
+        print("The role = ",self.role);
+        print("The department = ",self.department);
+        print("The salary = ",self.salary);
+
+class engineer(Employee):
+    def __init__(self,name,age):
+        self.name=name;
+        self.age=age;
+        super().__init__("manager","it",100000);
+s=engineer("yash",20);
+print(s.engineer());
+
+
+
+
+
+3....The greater price of item.
+answer :
+
+class detail:
+    def __init__(self,itemone,itempriceone):
+        self.itemone=itemone;
+        self.itempriceone=itempriceone;
+        
+    def __gt__(self,order2):
+        return self.itempriceone>order2.itempriceone;
+order1=detail("chips",20);
+order2=detail("Kurkura",10);
+
+print(order1>order2);
+
