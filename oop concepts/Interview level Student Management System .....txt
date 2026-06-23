@@ -1,0 +1,101 @@
+Interview level Questions....
+
+
+
+Student Management System
+
+Features:
+Add student
+Search student
+Delete student
+Display all students
+
+Use classes and objects.
+
+
+
+
+------>>>>>>
+
+
+
+class student:
+    def __init__(self,name,rollno,marks):
+        self.name=name;
+        self.rollno=rollno;
+        self.marks=marks;
+    def detail(self):
+        print(f"name : {self.name}");
+        print(f"roll : {self.rollno}");
+        print(f"marks : {self.marks}");
+
+class studentmanagement:
+    def __init__(self):
+        self.student=[];
+    def add_student(self):
+        name=input("Enter the name: ");
+        rollno=int(input("Enter the roll no : "));
+        marks=int(input("Enter the marks : "));
+        a=student(name,rollno,marks);
+        self.student.append(a);
+
+        print("Student added successfully");
+    
+    def search_stu(self):
+        n1=int(input("Enter the roll no : "));
+        for i in self.student:
+            if(i.rollno==n1):
+                print("student found");
+                i.detail();
+                return;
+        
+        print("Student not found");
+ 
+    def dele(self):
+        n1=int(input("Enter the roll number do you want to delete : "));
+        for i in self.student:
+            if(i.rollno==n1):
+                self.student.remove(i);
+                print("Deletd successfully");
+                return;
+            
+        print("student not found");
+ 
+    def dif(self):
+        for i in self.student:
+            i.detail();
+
+s=studentmanagement();
+
+while True:
+    print("Wellcome To student management system");
+    print("Enter the number ");
+    print("1.add student");
+    print("2.search student");
+    print("3.delete student");
+    print("4.exit");
+    n1=int(input("Enter the number : "));
+    if(n1==1):
+        s.add_student();
+    elif(n1==2):
+        s.search_stu();
+    elif(n1==3):
+        s.dele();
+    elif(n1==4):
+        break;
+
+
+
+            
+
+             
+
+
+
+
+
+
+
+
+
+
