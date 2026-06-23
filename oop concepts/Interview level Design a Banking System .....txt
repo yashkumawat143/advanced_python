@@ -1,0 +1,102 @@
+Interview level Question....
+
+
+Design a Banking System (Most Asked)
+
+Implement:
+
+Savings Account
+Current Account
+Deposit
+Withdraw
+Interest Calculation
+Transaction History
+
+
+
+
+
+------>>>>>>
+
+
+class bank:
+    def __init__(self,savingaccount,currentaccount):
+        self.savingaccount=savingaccount;
+        self.currentaccount=currentaccount;
+    def detail(self):
+        print(f"The saving account money {self.savingaccount}");
+        print(f"The current account money{self.currentaccount}");
+              
+ 
+class bankmoney(bank):
+    def __init__(self,savingaccount,currentaccount):
+        super().__init__(savingaccount,currentaccount)
+        self.history=[];
+
+    def his(self):
+        print("\n The transection history");
+        if(len(self.history)==0):
+            print("NO transection history");
+            return;
+        else:
+            for i in self.history:
+                print(i);
+            return;
+    
+    def deposite(self):
+        n1=int(input("Enter the amount : "));
+        self.currentaccount+=n1;
+        print("The amount successfully added");
+        self.history.append(f"The deposite{n1}");
+        return ;
+    def withdraw(self):
+        n1=int(input("Enter the amount : "));
+        if(self.currentaccount>=n1):
+            self.currentaccount-=n1;
+            print("Successfully withdraw");
+            self.history.append(f"The withdeaw{n1}\n");
+            return;
+        else:
+            print("Tou have no sufficient balance");
+            return;
+    def interest(self):
+        print("The intrest in saving account");
+        rate=5;
+        inte=(self.savingaccount*rate)/100;
+        print("The intrest : ",inte);
+        return;
+    def saving(self):
+        n1=int(input("Enter the amount : "));
+        self.savingaccount+=n1;
+        print("Successfully added");
+   
+
+s=bankmoney(100000,500000);
+
+while True:
+    print("Banking system");
+    print("Use the number");
+    print("1.Tranction history");
+    print("2.Deposite");
+    print("3.withdraw");
+    print("4.Interset calculation");
+    print("5.add money in saving account");
+    print("6.exit");
+    n1=int(input("Enter the number : "));
+    if(n1==1):
+        s.his();
+    elif(n1==2):
+        s.deposite();
+    elif(n1==3):
+        s.withdraw();
+    elif(n1==4):
+        s.interest();
+    elif(n1==5):
+        s.saving();
+    elif(n1==6):
+        print("Thank you");
+        break;
+
+    
+    
+            
