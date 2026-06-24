@@ -1,0 +1,137 @@
+oops Questions ....
+
+
+
+1....Bank Account with Private Balance
+
+Make balance private.
+Provide:
+deposit()
+withdraw()
+get_balance()
+
+answer :
+
+class privatebalance:
+    def __init__(self,amount):
+        self.amount=amount;
+    def deposite(self,dep):
+        self.amount+=dep;
+        print("Amount successfully added",dep);
+    def withdraw(self,wi):
+        if(self.amount>=wi):
+            self.amount-=wi;
+            print("Successfully withdrawl",wi);
+        else:
+            print("no sufficient balance");
+    def getbalance(self):
+        print("The balance = ",self.amount);
+
+
+s=privatebalance(5000);
+n1=int(input("Enter the deposite amount : "));
+n2=int(input("Enter the withdrwal amount : "));
+s.deposite(n1)
+s.withdraw(n2);
+s.getbalance();
+
+
+
+
+
+
+2......employee Salary
+
+Create private salary attribute.
+Use getter and setter methods.
+
+answer :
+
+
+class employee:
+    def __init__(self,salary):
+        self.__salary=salary;
+    
+    def getter(self):
+        return self.__salary;
+   
+    def setter(self,salary):
+        self.__salary=salary;
+
+s=employee(600000);
+print("The salary ",s.getter());
+
+s.setter(700000);
+print("The updated salary ",s.getter());
+
+
+
+3......Compare Products
+
+Create Product class.
+Overload:
+>
+<
+==
+Compare products based on price.
+
+
+answer :
+
+class item:
+    def __init__(self,product,price):
+        self.product=product;
+        self.price=price;
+    
+    def __gt__(self,other):
+        return self.price>other.price;
+ 
+    def __It__(self,other):
+        return self.price<other.price;
+ 
+    def __eq__(self,other):
+        return self.price==other.price;
+
+a=item("MEssho",100);
+a1=item("Flipcard",300);
+
+print(a>a1);
+print(a<a1);
+print(a==a1);
+
+
+
+
+
+4. Add Two Complex Numbers
+
+Create Complex class.
+Overload + operator.
+
+answer :
+
+
+class complex:
+    def __init__(self,real,img):
+        self.real=real;
+        self.img=img;
+    def __add__(self,other):
+        real=self.real+other.real;
+        img=self.img+other.img;
+        return complex(real,img);
+    def display(self):
+        print(f"{self.real}+{self.img}i")
+c=complex(3,4);
+c1=complex(5,6);
+
+cc=c+c1;
+cc.display()
+
+
+
+
+
+
+
+
+
