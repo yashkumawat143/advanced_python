@@ -1,0 +1,77 @@
+try and except....
+
+
+
+
+1....Write a program to divide two numbers entered by the user.
+answer :
+
+try:
+    n1=int(input("Enter the number : "));
+    n2=int(input("Enter the number do you want to divide : "));
+    result=n1/n2;
+    print("result : ",result);
+except ZeroDivisionError:
+    print("It is not divisible");
+
+
+
+
+2....Take an integer input from the user.
+If the user enters text (like "abc"), display: Invalid input!
+
+answer :
+
+try:
+    n1=int(input("Enter the number : "));
+    
+except ValueError:
+    print("Wrong value");
+
+
+
+3....Take two integers from the user and print their sum.
+Handle ValueError.
+
+answer :
+
+try:
+    n1=int(input("Enter the number : "));
+    n2=int(input("Enter the number : "));
+    ans=n1+n2;
+    print(ans);
+except ValueError:
+    print("invalid");
+
+
+
+4....Ask the user for a list index.
+Print the element from this list:
+
+answer :
+
+try:
+    n1=[1,2,3,4];
+    print(n1[5]);
+except:
+    print("Invalid range");
+
+
+
+5....Ask the user to enter a filename.
+Try opening it.
+If the file doesn't exist, display:
+File not found!
+
+answer :
+
+try:
+    n1=input("Enter the file name : ");
+    n=open(n1,"r");
+    print(n.read());
+except:
+    print("File is not found");
+
+
+
+
