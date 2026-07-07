@@ -1,0 +1,56 @@
+Using else....
+
+
+1....Take two numbers from the user.
+answer :
+
+try:
+    n1=int(input("Enter the number : "));
+    n2=int(input("Enter the number : "));
+    ans=n1/n2;
+    
+except Exception as e:
+    print("Not valid");
+else:
+    print("Division successfully");
+    print("Result : ",ans);
+
+
+
+2....Take an integer input.
+If successful:
+You entered 25
+Otherwise:
+Invalid input!
+
+answer :
+
+
+try:
+    n1=int(input("Enter the number : "));
+except Exception:
+    print("Not valid");
+else:
+    print("you Enter",n1);
+
+
+
+3....Ask the user to enter age.
+If the input is valid:
+Age accepted.
+Otherwise:
+Please enter a valid number.
+
+answer :
+
+try:
+    n1=int(input("Enter the number : "));
+except Exception:
+    print("Invalid input");
+else:
+    print("Age accepted : ",n1);
+
+
+
+4....
+
