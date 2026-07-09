@@ -1,0 +1,53 @@
+Using finally.....
+
+
+
+1....Open a file.
+Print its contents.
+Whether the file exists or not, print:
+
+answer :
+
+try:
+    n1=input("Enter the file name : ");
+    f=open("n1","r");
+    print(f.read());
+except FileNotFoundError:
+    print("File not found");
+finally:
+    print("The file is close");
+
+
+
+2....Take two integers.
+Divide them.
+Always print:
+Thank you for using .
+
+answer :
+
+try:
+    n1=int(input("Enter the number : "));
+    n2=int(input("Enter the number do you want to divide : "));
+    ans=n1/n2;
+    print(ans);
+except ZeroDivisionError:
+    print("Not valid");
+finally:
+    print("Thank you for using");
+
+
+
+3....Ask the user for a number.
+If it is zero, handle the exception.
+Always print:
+Execution Complete
+
+answer :
+
+try:
+    n=int(input("Enter the number : "));
+except:
+    print()
+finally:
+    print("Execution is completed");    
