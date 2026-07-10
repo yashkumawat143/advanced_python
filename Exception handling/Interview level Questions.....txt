@@ -1,0 +1,94 @@
+Interview level Questions....
+
+
+
+1....— ATM
+Menu:
+
+1. Withdraw
+2. Exit
+
+If withdrawal amount is greater than balance,
+raise ValueError("Insufficient Balance")
+Handle the exception.
+
+answer :
+
+
+balance=1200;
+while True:
+    print("ATM");
+    print("1.Withdraw");
+    print("2.Exit");
+    
+    n1=int(input("Enter the number : "));
+    if(n1==1):
+        n=int(input("Enter the amount : "));
+        try:
+            if(balance<n):
+              raise ValueError("Not sufficient balance");
+            balance-=n;
+        except Exception as e:
+            print(e);
+        else:
+            print("Successfully Amount Withdraw");
+    elif(n1==2):
+        break;
+    else:
+        print("Enter valid number only");
+
+
+
+
+
+2....Student Result
+
+Take marks.
+If
+Marks < 0
+Marks > 100
+raise exception.
+Otherwise print grade.
+
+answer :
+	
+n1=int(input("Enter the marks : "));
+try:
+    if(n1<0 or n1>100):
+        raise ValueError("Marks must bw Between 0 ans 100");
+except Exception as e:
+    print(e);
+else:
+    if(n1>=90):
+        print("A");
+    elif(n1>=80 and n1<=89):
+        print("B");
+    elif(n1>=70 and n1<=79):
+        print("C");
+    elif(n1<=69):
+        print("D");
+
+
+
+3....Login System
+Take username and password.
+If password length is less than 8,
+raise exception.
+Otherwise:
+register Successful.
+
+answer :
+
+try:
+    n1=input("Enter the user name : ");
+    n2=input("Enter the password : ");
+    if(len(n2)<8):
+        raise ValueError("Password length is to short");
+except Exception as e:
+    print(e);
+finally:
+    print("Register process completed");
+
+
+
+
