@@ -1,0 +1,102 @@
+file handling....
+
+
+
+1....Create a file named student.txt.
+answer :
+
+file=open("student.txt","w");
+
+
+
+2....Write your name into a file.
+answer :
+
+file=open("student.txt","a");
+n1=input("Enter your name : ");
+file.write(n1);
+file.close();
+
+
+
+3....Write your name, age, and city into a file.
+answer :
+
+file=open("student.txt","a");
+n1=input("Enter the name : ")
+n2=int(input("Enter your age : "));
+n3=input("Enter your city name : ");
+file.write("\n" +n1+ "\n" +str(n2)+"\n "+n3);
+file.close();
+
+
+
+4....Read and print the entire contents of a file.
+answer :
+
+try:
+    file=open("student.txt","r");
+    ans=file.read();
+    print(ans);
+except FileNotFoundError:
+    print("File not found");
+
+
+
+5....Read only the first line of a file.
+answer :
+
+file=open("student.txt","r");
+ans=file.readline();
+print(ans);
+
+
+
+6....Read all lines using readlines().
+answer :
+
+file=open("student.txt","r");
+ans=file.readlines();
+print(ans);
+
+
+
+7....Append your favorite programming language to an existing file.
+answer :
+
+file=open("student.txt","a");
+ans=file.write("\npython");
+file.close();
+print(ans);
+
+
+
+8....Create a file using "x" mode.
+answer :
+
+file=open("student`.txt","x");
+file.close();
+
+
+
+
+
+9....Use the with statement to read a file.
+answer :
+
+with open("student.txt","r") as file:
+    print(file.read());
+    
+
+
+10....Print a message if the file does not exist using try-except.
+answer :
+
+try:
+    file=open("student2.txt","r");
+    ans=file.read();   
+    print(ans);
+except FileNotFoundError:
+    print("The file not exist");
+
+
