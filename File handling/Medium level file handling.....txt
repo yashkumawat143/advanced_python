@@ -1,0 +1,114 @@
+Medium level file handling....
+
+
+
+1....Count the total number of lines in a file.
+answer :
+
+count=0;
+with open("student.txt","r") as file:
+    for i in file:
+        count+=1;
+print("Total line in file : ",count);
+
+
+
+
+2....Count the total number of words.
+answer :
+
+count=0;
+with open("student.txt","r") as file:
+    for i in file:
+        ans=i.split();
+        count+=len(ans);
+print("Total words in file : ",count);
+
+
+
+3....Count the total number of characters.
+answer :
+
+with open("student.txt","r") as file:
+    ans=file.read();
+    a=len(ans);
+print("The total number of charcters in file : ",a);
+
+
+
+4....Copy the contents of one file into another file.
+answer :
+
+with open("student.txt","r") as file:
+    ans=file.read();
+with open("newstudent.txt","w") as new:
+    new.write(ans);
+print("The data successfully copy ");
+
+
+
+5....Search for a word in a file.
+answer :
+
+file=open("student.txt","r");
+n1=input("Enter the word : ");
+data=file.read();
+if n1 in data:
+    print("The word found");
+else:
+    print("Word not found");
+file.close();
+
+
+
+6....Count how many times a word appears in a file.
+answer :
+
+file=open("student.txt","r");
+data=file.read();
+count=0;
+n1=input("Enter the word : ");
+data1=data.count(n1);
+print(n1,"=",data1);
+
+
+
+7....Read a file line by line using a loop.
+answer :
+
+with open("student.txt","r") as file:
+  for i in file:
+    print(i);
+
+
+    
+8....Display only lines that contain the word "Python".
+answer ;
+
+file=open("student.txt","r");
+
+n1=input("Enter the word : ");
+for line in file:
+    if(n1 in line):
+       print(line.strip());
+file.close();
+
+
+
+9....Convert all file contents to uppercase and print them.
+answer :
+
+file=open("student.txt","r");
+data=file.read();
+a=data.upper();
+print(a);
+
+
+
+10....Convert all file contents to lowercase.
+answer :
+
+file=open("student.txt","r");
+data=file.read();
+ans=data.lower();
+print(ans);
