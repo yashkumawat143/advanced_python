@@ -1,0 +1,75 @@
+Interview Level File handling ....
+
+
+
+1....Merge the contents of two files into a third file
+answer :
+
+file=open("student.txt","r");
+file1=open("newstudent.txt","r");
+data=file.read();
+data1=file1.read();
+file2=open("student2.txt","w");
+file2.write(data);
+file2.write(data1);
+print("It successfully added");
+
+
+
+2....Compare two files and check whether they are identical.
+answer :
+
+file=open("student.txt","r");
+data=file.read();
+file1=open("student2.txt","r");
+data1=file1.read();
+if(data==data1):
+    print("Its data is same");
+else:
+    print("Its data not same");
+file.close();
+file1.close();
+
+
+
+
+3....Count vowels, consonants, digits, and special characters in a file.
+answer :
+
+file=open("student.txt","r");
+data=file.read();
+count=0;
+countcon=0;
+countdigit=0;
+countun=0;
+for i in data:
+    if(i.isalpha()):
+        if(i in "AEIOUaeiou"):
+            count+=1;
+        else:
+            countcon+=1;
+    elif(i.isdigit()):
+        countdigit+=1;
+    elif(not i.isalpha() and not i.isdigit()):
+        countun+=1;
+    
+print("The total vowel : ",count);
+print("The total consonant : ",countcon);
+print("The total digit : ",countdigit);
+print("The total unique alphabate : ",countun);
+    
+
+
+
+5....Remove duplicate lines from a file.
+answer :
+
+file=open("student.txt","r");
+data=file.read();
+result="";
+for i in data:
+    if(i not in result):
+        result+=i;
+print(result);
+file.close();
+    
