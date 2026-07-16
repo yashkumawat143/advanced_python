@@ -1,0 +1,75 @@
+Using raise....
+
+
+
+1....
+Ask the user for age.
+If age is negative:
+raise ValueError("Age cannot be negative")
+Otherwise print:
+Eligible input.
+
+answer :
+
+n1=int(input("Enter the number : "));
+try:
+  if(n1<0):
+      raise ValueError("Age is negative");
+except ValueError as e:
+   print(e);
+else:
+   print("valid input");
+
+
+
+
+2....Ask the user for marks.
+If marks are greater than 100 or less than 0,
+raise an exception.
+
+answer :
+
+n1=int(input("Enter the marks : "));
+try:
+    if(n1>100 or n1<0):
+        raise ValueError("Exception");
+except ValueError as e:
+    print(e);
+else:
+    print("Valid ");
+
+
+
+3....Take salary input.
+If salary is negative,
+raise ValueError("Salary cannot be negative").
+
+answer :
+
+n1=int(input("Enter the salary : "));
+try:
+    if(n1<0):
+        raise ValueError("salary is neagative");
+except Exception as e:
+    print(e);
+else:
+    print("Valid salary");
+
+
+
+
+
+4....Ask the user to enter password length.
+If length is less than 8,
+raise ValueError("Password is too short").
+
+answer :
+
+n1=int(input("Enter the lenght of password : "));
+try:
+    if(n1<8):
+        raise ValueError("Length is not valid");
+except Exception as e:
+    print(e);
+else:
+    print("Valid Length ");
